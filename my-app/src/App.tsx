@@ -10,6 +10,7 @@ function App() {
 
   const [tempC, setTempC] = useState(0);
   const [location, setLocation] = useState({City: "", Country:""});
+  const [locationOnClick, setLocationOnClick]= useState({City: "", Country:""});
   const [icon, setIcon] = useState("");
   const [cityTag, setCityTag] = useState("");
   const [windspeed, setWindspeed] = useState(0);
@@ -46,7 +47,6 @@ function App() {
         `https://api.openweathermap.org/data/2.5/weather?q=${location.City},${location.Country}&APPID=fc45f1c741819c4bf127ffd04b8ee142`
       );
       const data = await result.json();
-      console.log(data)
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
@@ -72,7 +72,8 @@ function App() {
       
      
       setTempC(temp);
-      setCityTag(data.name)
+      setCityTag(data.name);
+      setLocationOnClick(location);
     }
     getData();
   };
@@ -88,7 +89,10 @@ function App() {
      <Button onClick={getWeatherByLocation}></Button>
      </div>
      <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
-     <FiveDayWeather/>
+    
+    {/* <div>
+      <FiveDayWeather location={locationOnClick}/>
+    </div> */}
     </div>
   );
 }
