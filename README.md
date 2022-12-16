@@ -1,4 +1,4 @@
-# React/TypeScript Hackathon
+npx create-react-app my-app --template typescript# React/TypeScript Hackathon
 
 ## Challenge
 
