@@ -21,7 +21,8 @@
 .App {
   display:flex;
   flex-direction: column;
-  background-color: #a296db;
+  background: rgb(162,150,219);
+background: radial-gradient(circle, rgba(162,150,219,1) 0%, rgba(222,218,245,1) 77%, rgba(241,234,234,1) 100%);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -36,3 +37,4 @@
   gap: 10px
   
 }
+

@@ -3,7 +3,8 @@ import {useState, useEffect} from "react";
 import WeatherWidget from './component/weather/weather';
 import Search from './component/search/search';
 import Button from './component/button/Button';
-import newImages from './data/data'
+import newImages from './data/data';
+import FiveDayWeather from './component/fiveDayWeather/fiveDay'
 
 function App() {
 
@@ -22,7 +23,6 @@ function App() {
         `https://api.openweathermap.org/data/2.5/weather?q=london,uk&APPID=fc45f1c741819c4bf127ffd04b8ee142`
       );
       const data = await result.json();
-      console.log(data)
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
@@ -88,7 +88,7 @@ function App() {
      <Button onClick={getWeatherByLocation}></Button>
      </div>
      <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
-     
+     <FiveDayWeather/>
     </div>
   );
 }

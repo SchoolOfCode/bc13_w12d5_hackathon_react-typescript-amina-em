@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./weather.css";
+import wind from '../../Assets/weather-icons/wind-speed.png'
+import humidity from '../../Assets/weather-icons/humidity.png'
+import pin from '../../Assets/weather-icons/location.png'
 
 type weatherWidgetProps = {
   icon: string;
@@ -23,13 +26,13 @@ export default function WeatherWidget(props: weatherWidgetProps) {
 
   return (
     <div className="weather-card">
-      <p> 📍{props.city}</p>
+      <p><img className="pin" src={pin} alt="source"/>{props.city}</p>
       <img className="weather-icon" src={props.icon} alt="weather-icon" />
       <div className="weather-info">
-        <p>{props.windspeed}mph</p>
-        {toggle ? <p>{props.tempC}°C</p> : <p>{tempF}°F</p>}
+        <p className="wind-speed"><img className= "icon" src={wind} alt="wind"/>{props.windspeed}<span className="units">mph</span></p>
+        {toggle ? <p className="temp">{props.tempC}<span className="units">°C</span></p> : <p className="temp">{tempF}<span className="units">°F</span></p>}
 
-        <p>{props.humidity}%</p>
+        <p className="humidity"><img className= "icon" src={humidity} alt="humidity"/>{props.humidity}<span className="units">%</span></p>
       </div>
       {toggle ? (
         <button
