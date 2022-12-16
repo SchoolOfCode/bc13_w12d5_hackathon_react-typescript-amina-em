@@ -29,7 +29,7 @@ export default function WeatherWidget(props: weatherWidgetProps) {
       />
       {toggle ? <p>{props.tempC}°C</p> : <p>{tempF}°F</p>}
       {toggle ? (
-        <button
+        <button className='toggle'
           onClick={() => {
             onToggleClick(props.tempC);
           }}
@@ -38,7 +38,7 @@ export default function WeatherWidget(props: weatherWidgetProps) {
           change to farenheit
         </button>
       ) : (
-        <button
+        <button className='toggle'
           onClick={() => {
             onToggleClick(props.tempC);
           }}

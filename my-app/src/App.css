@@ -1,5 +1,25 @@
+@font-face {
+  font-family: 'Dosis-Regular';
+  src: url('./Assets/Dosis/static/Dosis-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Karla-Regular';
+  src: url('./Assets/Karla/static/Karla-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Martel-Regular';
+  src: url('./Assets/Martel/Martel-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Neucha-Regular';
+  src: url('./Assets/Neucha/Neucha-Regular.ttf');
+}
+
 .App {
-  background-color: azure;
+  background-color: #E2DDFA;
   height: 100vh;
   width: 100vw;
   display: flex;

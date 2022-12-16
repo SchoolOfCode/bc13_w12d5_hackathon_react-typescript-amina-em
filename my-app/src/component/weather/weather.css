@@ -1,4 +1,11 @@
+.toggle{
+    font-family: Dosis-regular;
+}
+
 .weather-card{
+    font-family: Neucha-Regular;
+    color: #545262;
+    border-radius: 10%;
     background-color: antiquewhite;
     height: 50vh;
     width: 20vw;
