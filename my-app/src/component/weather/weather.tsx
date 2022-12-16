@@ -5,7 +5,9 @@ type weatherWidgetProps = {
   icon: string;
   location: {City: string, 
   Country: string};
-  tempC: number
+  tempC: number,
+  city: string,
+ 
 }
 
 export default function WeatherWidget(props: weatherWidgetProps) {
@@ -20,8 +22,9 @@ export default function WeatherWidget(props: weatherWidgetProps) {
 
   return (
     <div className="weather-card">
+      <p> 📍{props.city}</p>
       <img
-        src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}
+        src={props.icon}
         alt="weather-icon"
       />
       {toggle ? <p>{props.tempC}°C</p> : <p>{tempF}°F</p>}

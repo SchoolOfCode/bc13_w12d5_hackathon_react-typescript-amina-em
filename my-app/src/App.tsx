@@ -3,12 +3,15 @@ import {useState, useEffect} from "react";
 import WeatherWidget from './component/weather/weather';
 import Search from './component/search/search';
 import Button from './component/button/Button';
+import newImages from './data/data'
 
 function App() {
 
   const [tempC, setTempC] = useState(0);
   const [location, setLocation] = useState({City: "", Country:""});
   const [icon, setIcon] = useState("");
+  const [cityTag, setCityTag] = useState("");
+
 
   useEffect(() => {
     async function getData() {
@@ -20,9 +23,13 @@ function App() {
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
-      setIcon(data.weather[0].icon);
+      const myIcon = data.weather[0].icon
+      if(myIcon === '01d' || myIcon === '01n'){
+        setIcon(newImages.clearSky01dn);
+      }
      
       setTempC(temp);
+      setCityTag(data.name)
     }
     getData();
   }, []);
@@ -37,9 +44,28 @@ function App() {
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
-      setIcon(data.weather[0].icon);
+      const myIcon = data.weather[0].icon
+      if(myIcon === '01d' || myIcon === '01n'){
+        setIcon(newImages.clearSky01dn);
+      } else if (myIcon === '02d' || myIcon === '02n'){
+        setIcon(newImages.fewClouds02dn);
+      } else if (myIcon === '03d' || myIcon === '03n' || myIcon === '04d' || myIcon === '04n'){
+        setIcon(newImages.scatteredClouds03dn);
+      } else if (myIcon === '09d' || myIcon === '09n'){
+        setIcon(newImages.showerRain09dn);
+      } else if (myIcon === '10d' || myIcon === '10n'){
+        setIcon(newImages.rain10dn);
+      } else if (myIcon === '11d' || myIcon === '11n'){
+        setIcon(newImages.thunderstorm11dn);
+      } else if (myIcon === '13d' || myIcon === '13n'){
+        setIcon(newImages.snow13d);
+      } else if (myIcon === '50d' || myIcon === '50n'){
+        setIcon(newImages.mist50d);
+      }
+      
      
       setTempC(temp);
+      setCityTag(data.name)
     }
     getData();
   };
@@ -55,7 +81,7 @@ function App() {
     <div className="App">
       <Search placeholder="Search City" onChange={onChangeCity}/>
       <Search placeholder="Search Country" onChange={onChangeCountry}/>
-     <WeatherWidget icon={icon} tempC={tempC} location={location}/>
+     <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location}/>
      <Button onClick={getWeatherByLocation}></Button>
     </div>
   );
