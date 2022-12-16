@@ -45,6 +45,7 @@ function App() {
         (data.main.temp - 273.15).toFixed(1)
       );
       const myIcon = data.weather[0].icon
+      
       if(myIcon === '01d' || myIcon === '01n'){
         setIcon(newImages.clearSky01dn);
       } else if (myIcon === '02d' || myIcon === '02n'){
