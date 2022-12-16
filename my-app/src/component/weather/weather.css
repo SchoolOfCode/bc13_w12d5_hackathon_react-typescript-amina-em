@@ -2,11 +2,27 @@
     font-family: Dosis-regular;
 }
 
+.weather-icon{
+    height:100px;
+    width: 100px;
+    justify-content: center
+}
+
 .weather-card{
+    display:flex;
+    flex-direction: column;
     font-family: Neucha-Regular;
+    font-size:30px;
     color: #545262;
     border-radius: 10%;
     background-color: antiquewhite;
     height: 50vh;
     width: 20vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: row;
 }

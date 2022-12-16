@@ -11,6 +11,9 @@ function App() {
   const [location, setLocation] = useState({City: "", Country:""});
   const [icon, setIcon] = useState("");
   const [cityTag, setCityTag] = useState("");
+  const [windspeed, setWindspeed] = useState(0);
+  const [weatherDescription, setWeatherDescription] = useState("");
+  const [humidity, setHumidity] = useState(0);
 
 
   useEffect(() => {
@@ -29,7 +32,10 @@ function App() {
       }
      
       setTempC(temp);
-      setCityTag(data.name)
+      setCityTag(data.name);
+      setWeatherDescription(data.weather[0].main);
+      setWindspeed(data.wind.speed);
+      setHumidity(data.main.humidity);
     }
     getData();
   }, []);
@@ -73,15 +79,11 @@ function App() {
   function onChangeCity(e: React.ChangeEvent<HTMLInputElement>){
     setLocation({...location, City:e.target.value})
   }
-  function onChangeCountry(e: React.ChangeEvent<HTMLInputElement>){
-    setLocation({...location, Country:e.target.value})
-  }
   
   return (
     <div className="App">
       <Search placeholder="Search City" onChange={onChangeCity}/>
-      <Search placeholder="Search Country" onChange={onChangeCountry}/>
-     <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location}/>
+     <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
      <Button onClick={getWeatherByLocation}></Button>
     </div>
   );

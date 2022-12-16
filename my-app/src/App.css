@@ -19,6 +19,8 @@
 }
 
 .App {
+  display:flex;
+  flex-direction: column;
   background-color: #E2DDFA;
   height: 100vh;
   width: 100vw;
