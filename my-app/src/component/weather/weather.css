@@ -15,9 +15,9 @@
     font-size:30px;
     color: #545262;
     border-radius: 10%;
-    background-color: antiquewhite;
-    height: 50vh;
-    width: 20vw;
+    background-color: #fae3e7;
+    height: 400px;
+    width: 400px;
     justify-content: center;
     align-items: center;
 }
@@ -25,4 +25,5 @@
 .weather-info{
     display: flex;
     flex-direction: row;
+    gap: 40px
 }

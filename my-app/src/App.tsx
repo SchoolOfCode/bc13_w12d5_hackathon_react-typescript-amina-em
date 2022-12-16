@@ -83,9 +83,12 @@ function App() {
   
   return (
     <div className="App">
+      <div className="findCity">
       <Search placeholder="Search City" onChange={onChangeCity}/>
-     <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
      <Button onClick={getWeatherByLocation}></Button>
+     </div>
+     <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
+     
     </div>
   );
 }
