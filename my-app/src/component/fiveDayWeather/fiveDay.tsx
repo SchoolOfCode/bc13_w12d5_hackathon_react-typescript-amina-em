@@ -1,24 +1,21 @@
 import { useState, useEffect } from 'react';
 import FiveDayCard from './fiveDayCard';
+import "./fiveDay.css";
 
 type fiveDayProps = {
     location: {City: string, Country: string}
 }
 
-type cardsArrayData = {
-
-    cardsArray: any
-
+interface DataObject {dt: number,
+weather: [{description: string,
+    icon: any}],
+main: {temp: number},
 }
 
 export default function FiveDayWeather(props: fiveDayProps){
     const [lat, setLat] = useState(0);
     const [long, setLong] = useState(0);
-    const [cardsArray, setCardsArray] = useState([{
-        dt: 1671451200,
-        dt_txt: "2022-12-19 12:00:00",
-        visibility: 10000,
-        wind: {speed: 6.42, deg: 317, gust: 7.72}}]);
+    const [cardsArray, setCardsArray] = useState<DataObject[]>([]);
 
     useEffect(()=>{
         async function getFiveDay(){
@@ -39,10 +36,7 @@ export default function FiveDayWeather(props: fiveDayProps){
     return (
          <div className="five-day-container">
             {cardsArray.filter((oneCard, index) => index < 5).map((oneCard)=>{ 
-             return <FiveDayCard date={cardsArray[0].dt} />    })}
+             return <FiveDayCard date={oneCard.dt} description={oneCard.weather[0].description} temperature={oneCard.main.temp} icon={oneCard.weather[0].icon}/>})}
         </div>
     )
 }
-
-//
-   // 
