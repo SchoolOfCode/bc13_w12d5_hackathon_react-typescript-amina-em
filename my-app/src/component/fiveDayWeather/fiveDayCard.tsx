@@ -1,5 +1,5 @@
 type FiveDayCardProps = {
-    date: string
+    date: number
     //description: string
     //icon: string
     //temperature: number

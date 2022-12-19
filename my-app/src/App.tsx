@@ -90,9 +90,9 @@ function App() {
      </div>
      <WeatherWidget city = {cityTag} icon={icon} tempC={tempC} location={location} humidity={humidity} windspeed={windspeed} weatherDescription={weatherDescription}/>
     
-    {/* <div>
+    <div>
       <FiveDayWeather location={locationOnClick}/>
-    </div> */}
+    </div>
     </div>
   );
 }
