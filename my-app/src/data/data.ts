@@ -46,12 +46,23 @@ type obj = {
     "04n": newImages.brokenClouds04dn,
     "05d": newImages.showerRain09dn,
     "05n": newImages.showerRain09dn,
-    "06d": newImages.rain10dn,
-    "06n": newImages.rain10dn,
-    "07d": newImages.thunderstorm11dn,
-    "07n": newImages.thunderstorm11dn,
-    "08d": newImages.snow13d,
-    "08n": newImages.snow13d,
-    "09d": newImages.mist50d,
-    "09n": newImages.mist50d}
+    "10d": newImages.rain10dn,
+    "10n": newImages.rain10dn,
+    "11d": newImages.thunderstorm11dn,
+    "11n": newImages.thunderstorm11dn,
+    "13d": newImages.snow13d,
+    "13n": newImages.snow13d,
+    "50d": newImages.mist50d,
+    "50n": newImages.mist50d}
    
+
+    export const newDay: Array<string> = [
+      'Sunday',
+      'Monday', 
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday'
+
+    ]

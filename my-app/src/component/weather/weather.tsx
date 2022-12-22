@@ -3,9 +3,11 @@ import "./weather.css";
 import wind from '../../Assets/weather-icons/wind-speed.png'
 import humidity from '../../Assets/weather-icons/humidity.png'
 import pin from '../../Assets/weather-icons/location.png'
+import FiveDayWeather from "../fiveDayWeather/fiveDay";
 
 type weatherWidgetProps = {
   icon: string;
+  locationOnClick: { City: string; Country: string };
   location: { City: string; Country: string };
   tempC: number;
   city: string;
@@ -25,6 +27,7 @@ export default function WeatherWidget(props: weatherWidgetProps) {
   }
 
   return (
+    <>
     <div className="weather-card">
       <p><img className="pin" src={pin} alt="source"/>{props.city}</p>
       <img className="weather-icon" src={props.icon} alt="weather-icon" />
@@ -55,6 +58,12 @@ export default function WeatherWidget(props: weatherWidgetProps) {
           Change to Celsius
         </button>
       )}
+
+      
     </div>
+    <div className="five-day-container">
+    <FiveDayWeather location={props.locationOnClick} onToggleClick={onToggleClick}/>
+    </div>
+    </>
   );
 }
