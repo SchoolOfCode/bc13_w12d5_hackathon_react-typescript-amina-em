@@ -43,7 +43,7 @@ export default function FiveDayWeather(props: fiveDayProps) {
   return (
     <div className="five-day-container">
       {cardsArray
-        .filter((oneCard, index) => index < 5)
+        .filter((oneCard, index) => index%8===7)
         .map((oneCard) => {
           return (
             <FiveDayCard

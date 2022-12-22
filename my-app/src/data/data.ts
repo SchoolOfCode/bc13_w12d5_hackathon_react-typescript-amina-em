@@ -35,4 +35,23 @@ type obj = {
     mist50d: mist,
   }
   
-  export default newImages
+  export const newImageMap: Record<string,string>= {
+    "01d" : newImages.clearSky01dn,
+    "01n": newImages.clearSky01dn,
+    "02d": newImages.fewClouds02dn,
+    "02n": newImages.fewClouds02dn,
+    "03d": newImages.scatteredClouds03dn,
+    "03n": newImages.scatteredClouds03dn,
+    "04d":newImages.brokenClouds04dn,
+    "04n": newImages.brokenClouds04dn,
+    "05d": newImages.showerRain09dn,
+    "05n": newImages.showerRain09dn,
+    "06d": newImages.rain10dn,
+    "06n": newImages.rain10dn,
+    "07d": newImages.thunderstorm11dn,
+    "07n": newImages.thunderstorm11dn,
+    "08d": newImages.snow13d,
+    "08n": newImages.snow13d,
+    "09d": newImages.mist50d,
+    "09n": newImages.mist50d}
+   

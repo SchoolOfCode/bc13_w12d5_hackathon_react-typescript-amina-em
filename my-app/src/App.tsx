@@ -10,18 +10,17 @@ function App() {
 
   const [tempC, setTempC] = useState(0);
   const [location, setLocation] = useState({City: "", Country:""});
-  const [locationOnClick, setLocationOnClick]= useState({City: "", Country:""});
+  const [locationOnClick, setLocationOnClick]= useState({City: "london", Country:"uk"});
   const [icon, setIcon] = useState("");
   const [cityTag, setCityTag] = useState("");
   const [windspeed, setWindspeed] = useState(0);
   const [weatherDescription, setWeatherDescription] = useState("");
   const [humidity, setHumidity] = useState(0);
 
-
   useEffect(() => {
     async function getData() {
       const result = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=london,uk&APPID=fc45f1c741819c4bf127ffd04b8ee142`
+        `https://api.openweathermap.org/data/2.5/weather?q=${locationOnClick.City},${locationOnClick.Country}&APPID=fc45f1c741819c4bf127ffd04b8ee142`
       );
       const data = await result.json();
       const temp: number | undefined = Number(
@@ -39,7 +38,7 @@ function App() {
       setHumidity(data.main.humidity);
     }
     getData();
-  }, []);
+  }, [locationOnClick]);
 
   function getWeatherByLocation(): void {
     async function getData() {
