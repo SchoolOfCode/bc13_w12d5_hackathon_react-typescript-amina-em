@@ -19,7 +19,6 @@ export default function FiveDayCard(props: FiveDayCardProps) {
         alt={"icon"}
       />
       <p>{(props.temperature -273).toFixed(1)} °C</p>
-      {ontoggle ? <p className="temp">{(props.temperature -273).toFixed(1)}<span className="units">°C</span></p> : <p className="temp">{(((props.temperature -273)*(9/5))+32).toFixed}<span className="units">°F</span></p>}
       <p>{props.description}</p>
     </div>
   );

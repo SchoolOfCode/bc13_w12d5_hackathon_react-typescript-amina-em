@@ -1,10 +1,16 @@
 .five-day-container{
+    column-count: 5;
     display:flex;
     flex-direction: row;
+    row-gap: 30px;
 }
 
 .fiveDaySingleCard{
     font-family: Dosis-Regular;
     background-color: white;
+    border-radius: 4%;
+    justify-content: center;
+    align-items: center;
+    
 }
 
