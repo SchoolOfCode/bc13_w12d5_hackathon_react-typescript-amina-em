@@ -1,12 +1,10 @@
 import {newDay} from '../../data/data'
-import {useState} from 'react';
 
 type FiveDayCardProps = {
   date: number;
   description: string;
   icon: any;
   temperature: number;
-  onToggleClick: (number: number)=> void;
   toggle: boolean
 };
 
@@ -22,7 +20,6 @@ export default function FiveDayCard(props: FiveDayCardProps) {
         alt={"icon"}
       />
       {props.toggle ? <p>{(props.temperature-273).toFixed(1)}°C</p> : <p>{(((props.temperature-273)*9/5)+32).toFixed(1)}°F</p>}
-      {/* // <p>{(props.temperature -273).toFixed(1)}°C</p> */}
       <p>{props.description}</p>
     </div>
   );

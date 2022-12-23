@@ -6,7 +6,6 @@ import {newImageMap} from '../../data/data';
 
 type fiveDayProps = {
   location: { City: string; Country: string };
-  onToggleClick: (tempC: number)=> void;
   toggle: boolean
 };
 
@@ -59,7 +58,6 @@ export default function FiveDayWeather(props: fiveDayProps) {
               description={oneCard.weather[0].description}
               temperature={oneCard.main.temp}
               icon={newImageMap[oneCard.weather[0].icon]}
-              onToggleClick={props.onToggleClick}
               toggle={props.toggle}
             />
           );
