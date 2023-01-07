@@ -61,9 +61,9 @@ export default function WeatherWidget(props: weatherWidgetProps) {
 
       
     </div>
-    <div className="five-day-container">
+   
     <FiveDayWeather location={props.locationOnClick} toggle={toggle}/>
-    </div>
+   
     </>
   );
 }
