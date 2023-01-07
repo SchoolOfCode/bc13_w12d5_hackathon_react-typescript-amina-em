@@ -1,6 +1,6 @@
 .five-day-container{
     width: 400px;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: row;
     gap:6px;
@@ -15,7 +15,7 @@
     flex-direction: column;
     width: 75px;
     font-family: Dosis-Regular;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 4%;
     justify-content: center;
     align-items: center;
