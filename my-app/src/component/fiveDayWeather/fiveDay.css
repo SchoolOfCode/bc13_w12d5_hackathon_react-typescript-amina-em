@@ -1,6 +1,5 @@
 .five-day-container{
-    background-color:rgb(255, 255, 255);
-    margin-top: 12%;
+        margin-top: 12%;
     padding-top: 15%;
     padding-bottom: 2%;
     height:100%;
@@ -12,6 +11,10 @@
 -moz-border-radius: 0px 2px  30px  30px;
 border-radius: 0px 2px  30px  30px;
 }
+
+.five-day-container-light{background-color:rgb(255, 255, 255);}
+.five-day-container-dark{background-color: #131438;
+color: white }
 
 .fiveDaySingleCard{
     display: flex;

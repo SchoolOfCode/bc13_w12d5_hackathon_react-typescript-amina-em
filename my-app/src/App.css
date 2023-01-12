@@ -36,7 +36,8 @@ body, #root{
 }
 
 .App-Dark{
-  background-color: black;
+  background-color: #A975DB;
+  background-image:  linear-gradient(315deg, #A975DB 0%, #501C8A 38%, #003A46 100%);
 }
 
 .App-Light{
