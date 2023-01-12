@@ -3,6 +3,7 @@ import "./weather.css";
 import wind from "../../Assets/weather-icons/wind-speed.png";
 import humidity from "../../Assets/weather-icons/humidity.png";
 import pin from "../../Assets/weather-icons/location.png";
+import visbility from "../../Assets/weather-icons/visibility.png"
 import FiveDayWeather from "../fiveDayWeather/fiveDay";
 import { DarkModeContext } from "../../Context/DarkModeContext";
 
@@ -15,6 +16,7 @@ type weatherWidgetProps = {
   windspeed: number;
   weatherDescription: string;
   humidity: number;
+  visibility: number;
 };
 
 export default function WeatherWidget(props: weatherWidgetProps) {
@@ -37,36 +39,12 @@ export default function WeatherWidget(props: weatherWidgetProps) {
             : `weather-card weather-card-light`
         }
       >
+        <div className="card-header">
         <p>
           <img className="pin" src={pin} alt="source" />
           {props.city}
         </p>
-        <img className="weather-icon" src={props.icon} alt="weather-icon" />
-        <div className="weather-info">
-          <p className="wind-speed">
-            <img className="icon" src={wind} alt="wind" />
-            {props.windspeed}
-            <span className="units">mph</span>
-          </p>
-          {toggle ? (
-            <p className="temp">
-              {props.tempC}
-              <span className="units">°C</span>
-            </p>
-          ) : (
-            <p className="temp">
-              {tempF}
-              <span className="units">°F</span>
-            </p>
-          )}
-
-          <p className="humidity">
-            <img className="icon" src={humidity} alt="humidity" />
-            {props.humidity}
-            <span className="units">%</span>
-          </p>
-        </div>
-        {toggle ? (
+        {/* {toggle ? (
           <button
             className="toggle"
             onClick={() => {
@@ -86,10 +64,46 @@ export default function WeatherWidget(props: weatherWidgetProps) {
             {" "}
             Change to Celsius
           </button>
-        )}
-      </div>
+        )} */}
+        </div>
+        <div className="weather-description-container">
+        <img className="weather-icon" src={props.icon} alt="weather-icon" />
+          <div className="today-weather-info">
+       
+        {toggle ? (
+            <p className="temp">
+              {props.tempC}
+              <span className="units">°C</span>
+            </p>
+          ) : (
+            <p className="temp">
+              {tempF}
+              <span className="units">°F</span>
+            </p>
+          )}
+           <p>{props.weatherDescription}</p>
+        </div>      
+    
+        </div>
+        <div className="weather-info">
+          <p className="wind-speed">
+            <img className="icon" src={wind} alt="wind" />
 
-      <FiveDayWeather location={props.locationOnClick} toggle={toggle} />
+            <span className="units">{props.windspeed}kmph</span>
+          </p>
+          <p className="visibility">
+            <img className="icon" src={visbility} alt="visibility" />
+           
+            <span className="units"> {(props.visibility/1000).toFixed(1)}km</span>
+          </p>
+          <p className="humidity">
+            <img className="icon" src={humidity} alt="humidity" />
+          
+            <span className="units">  {props.humidity}%</span>
+          </p>
+        </div>
+        <FiveDayWeather location={props.locationOnClick} toggle={toggle} />
+      </div>
     </>
   );
 }

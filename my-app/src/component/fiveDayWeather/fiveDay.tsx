@@ -27,7 +27,6 @@ export default function FiveDayWeather(props: fiveDayProps) {
         `https://api.openweathermap.org/geo/1.0/direct?q=${props.location.City}&limit=1&appid=114c292ebf4279905376e7fa73cfb341`
       );
       const response = await data.json();
-        console.log(response)
       if (response[0]) {
         const latitude = response[0].lat;
         const longitude = response[0].lon;
@@ -39,8 +38,6 @@ export default function FiveDayWeather(props: fiveDayProps) {
         `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=114c292ebf4279905376e7fa73cfb341`
       );
       const fiveDayResponse = await fiveDayFetch.json();
-      console.log(fiveDayResponse)
-      console.log(fiveDayResponse.list);
       setCardsArray(fiveDayResponse.list);
     }
     getFiveDay();
@@ -50,7 +47,7 @@ export default function FiveDayWeather(props: fiveDayProps) {
 
     <div className="five-day-container">
       {cardsArray
-        .filter((oneCard, index) => index%8===7)
+        .filter((oneCard, index) => index % 8 === 7)
         .map((oneCard) => {
           return (
             <FiveDayCard

@@ -10,6 +10,7 @@ import { newImageMap } from "./data/data";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
   const [tempC, setTempC] = useState(0);
+  const [visibility, setVisibility] = useState(0)
   const [locationForm, setLocationForm] = useState({ City: "", Country: "" });
   const [locationOnClick, setLocationOnClick] = useState({
     City: "london",
@@ -39,6 +40,8 @@ function App() {
       setWeatherDescription(data.weather[0].main);
       setWindspeed(data.wind.speed);
       setHumidity(data.main.humidity);
+      setVisibility(data.visibility)
+
     }
     getData();
   }, [locationOnClick]);
@@ -52,12 +55,14 @@ function App() {
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
+      console.log(data)
       const myIcon = data.weather[0].icon;
       setIcon(newImageMap[myIcon]);
 
       setTempC(temp);
       setCityTag(data.name);
       setLocationOnClick(locationForm);
+      setVisibility(data.visibility)
     }
     getData();
   }
@@ -82,6 +87,7 @@ function App() {
         humidity={humidity}
         windspeed={windspeed}
         weatherDescription={weatherDescription}
+        visibility={visibility}
       />
 
       <div></div>
