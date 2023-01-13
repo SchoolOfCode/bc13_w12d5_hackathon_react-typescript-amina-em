@@ -1,7 +1,12 @@
 .search{
-    border-radius: 6%;
-    font-family: Dosis-regular;
-    text-align: center;
-    font-size: 15px;
-    border-width: 2px;
+  background-color: rgb(255, 255, 255);
+  padding: 16px ;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Neucha-Regular';
+  font-weight: 600;
+  color: #a9b8c9;
+  font-size: 16px;
+  transition: all 240ms ease-out;
+  width: 100%;
 }

@@ -90,7 +90,7 @@ function App() {
     <div className={darkMode ? `App App-Dark` : `App App-Light`}>
       <Toggle />
       <div className="findCity">
-        <Search placeholder="Search City" onChange={onChangeCity} />
+        <Search placeholder="Search By City" onChange={onChangeCity} />
         <Button onClick={getWeatherByLocation}></Button>
         
       </div>
