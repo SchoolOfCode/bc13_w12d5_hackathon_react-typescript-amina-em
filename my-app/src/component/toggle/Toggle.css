@@ -1,5 +1,9 @@
 .container {
+
+    width: 7%;
     text-align: center;
+    align-self: flex-end;
+  
   }
 /* The switch - the box around the slider */
 .switch {

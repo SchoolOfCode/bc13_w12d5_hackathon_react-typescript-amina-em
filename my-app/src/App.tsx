@@ -10,7 +10,7 @@ import { newImageMap } from "./data/data";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
   const [tempC, setTempC] = useState(0);
-  const [visibility, setVisibility] = useState(0)
+  const [sunset, setSunset] = useState("0")
   const [locationForm, setLocationForm] = useState({ City: "", Country: "" });
   const [locationOnClick, setLocationOnClick] = useState({
     City: "london",
@@ -40,7 +40,13 @@ function App() {
       setWeatherDescription(data.weather[0].main);
       setWindspeed(data.wind.speed);
       setHumidity(data.main.humidity);
-      setVisibility(data.visibility)
+      const options = {
+        hour12: false,
+        timeZone: 'America/Los_Angeles'
+      };
+      let date = new Date(data.sys.sunset * 1000)
+     
+      setSunset(new Intl.DateTimeFormat('default', options).format(data.sys.sunset))
 
     }
     getData();
@@ -62,7 +68,16 @@ function App() {
       setTempC(temp);
       setCityTag(data.name);
       setLocationOnClick(locationForm);
-      setVisibility(data.visibility)
+      setHumidity(data.main.humidity);
+    
+      const options = {
+        hour12: false,
+        timeZone: 'America/Los_Angeles'
+      };
+
+      let date = new Date(data.sys.sunset * 1000)
+     
+      setSunset(new Intl.DateTimeFormat('default', options).format(data.sys.sunset))
     }
     getData();
   }
@@ -73,10 +88,11 @@ function App() {
 
   return (
     <div className={darkMode ? `App App-Dark` : `App App-Light`}>
+      <Toggle />
       <div className="findCity">
         <Search placeholder="Search City" onChange={onChangeCity} />
         <Button onClick={getWeatherByLocation}></Button>
-        <Toggle />
+        
       </div>
       <WeatherWidget
         locationOnClick={locationOnClick}
@@ -87,7 +103,7 @@ function App() {
         humidity={humidity}
         windspeed={windspeed}
         weatherDescription={weatherDescription}
-        visibility={visibility}
+        sunset={sunset}
       />
 
       <div></div>

@@ -60,9 +60,9 @@
 }
 
 .weather-info-light{
-  background-color:rgb(178, 216, 255);
+  background-color:rgb(187, 221, 255);
 }
-.weather-info-dark{background-color: #ccabeb;}
+.weather-info-dark{background-color:  #A177CA;}
 .weather-description-container {
   display: flex;
   height: 22%;
@@ -86,7 +86,7 @@
 
   .weather-description-container-dark{color: white;
     background-color: #EAC6FE;
-    background-image: linear-gradient(135deg, #EAC6FE 0%, #A177CA 18%, #8457AF 39%, #2C4C9B 65%, #150D4A 100%);}
+    background-image: linear-gradient(-31deg, #EAC6FE 0%, #A177CA 18%, #8457AF 39%, #2C4C9B 65%, #150D4A 100%);}
 
 .wind-speed,
 .visibility,
