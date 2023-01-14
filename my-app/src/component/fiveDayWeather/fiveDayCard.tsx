@@ -1,6 +1,5 @@
-import { useContext } from "react";
 import {newDay} from '../../data/data'
-import { DarkModeContext } from "../../Context/DarkModeContext";
+
 
 type FiveDayCardProps = {
   date: number;
@@ -11,7 +10,6 @@ type FiveDayCardProps = {
 };
 
 export default function FiveDayCard(props: FiveDayCardProps) {
-  const { darkMode } = useContext(DarkModeContext);
 
   let myDate = new Date(props.date * 1000);
   const finalDate = myDate.getDay();

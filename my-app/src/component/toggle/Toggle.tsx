@@ -3,7 +3,7 @@ import { DarkModeContext } from "../../Context/DarkModeContext";
 import "./Toggle.css";
 
 export default function Toggle() {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const {  toggleDarkMode } = useContext(DarkModeContext);
   const handleClick = () => {
     toggleDarkMode();
   };
