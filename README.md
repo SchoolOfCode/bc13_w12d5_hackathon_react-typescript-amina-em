@@ -4,7 +4,7 @@
 
  ## **_Welcome!_** 🌤️☔🌨️
 
- This app gives you need-to-know weather information no matter what your location.
+ This app gives you need-to-know weather information, wherever you are!
  
  ---
  
@@ -81,9 +81,6 @@ To run the front-end locally follow the steps below:
 | Secondary  | ![#150d4a](https://via.placeholder.com/15/150d4aF/150d4a.png)`#B2D1FF` |
 | Main       | ![#0000004d](https://via.placeholder.com/15/0000004d/0000004d.png) `#0000004d`        |
 
-<br/>
-
----
 
 ## **_Light-Mode_** ☀️
 
