@@ -1,6 +1,6 @@
 **[DEMO LINK](https://deploy-preview-1--friendly-semifreddo-be1b9a.netlify.app/)**
 
-[<img src="./my-app/src/Assets/weather-icons/weatherAppLogo.png"  width="120" 
+[<img src="./my-app/src/Assets/weather-icons/weatherAppLogo.png"  width="220" 
      height="100"/>](image.png)
 
 <br/>
