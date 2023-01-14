@@ -40,13 +40,11 @@ function App() {
       setWeatherDescription(data.weather[0].main);
       setWindspeed(data.wind.speed);
       setHumidity(data.main.humidity);
-      const options = {
-        hour12: false,
-        timeZone: 'America/Los_Angeles'
-      };
       let date = new Date(data.sys.sunset * 1000)
-     
-      setSunset(new Intl.DateTimeFormat('default', options).format(data.sys.sunset))
+      let hours = date.getHours()
+      let minutes =  date.getMinutes()
+      let formattedTime = hours + ' : ' + minutes
+      setSunset(formattedTime)
 
     }
     getData();
@@ -70,14 +68,11 @@ function App() {
       setLocationOnClick(locationForm);
       setHumidity(data.main.humidity);
     
-      const options = {
-        hour12: false,
-        timeZone: 'America/Los_Angeles'
-      };
-
       let date = new Date(data.sys.sunset * 1000)
-     
-      setSunset(new Intl.DateTimeFormat('default', options).format(data.sys.sunset))
+      let hours = date.getHours()
+      let minutes =  date.getMinutes
+      let formattedTime = hours + ':' + minutes
+      setSunset(formattedTime)
     }
     getData();
   }

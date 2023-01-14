@@ -100,6 +100,7 @@ export default function WeatherWidget(props: weatherWidgetProps) {
             <img className="icon" src={wind} alt="wind" />
 
             <span className="units">{props.windspeed}kmph</span>
+      
           </p>
           <p className="visibility">
             <img className="icon" src={sunset} alt="sunset" />
@@ -108,11 +109,13 @@ export default function WeatherWidget(props: weatherWidgetProps) {
               {" "}
               {props.sunset }
             </span>
+        
           </p>
           <p className="humidity">
             <img className="icon" src={humidity} alt="humidity" />
 
             <span className="units"> {props.humidity}%</span>
+
           </p>
         </div>
         <FiveDayWeather location={props.locationOnClick} toggle={toggle} />

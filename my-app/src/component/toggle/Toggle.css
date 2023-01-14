@@ -1,5 +1,4 @@
 .container {
-
     width: 7%;
     text-align: center;
     align-self: flex-end;
@@ -28,7 +27,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color:#EAC6FE;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -46,11 +45,11 @@
   }
   
   input:checked + .slider {
-    background-color: #A975DB;
+    background-color: #2C4C9B;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #A975DB;
+    box-shadow: 0 0 1px #2C4C9B;
   }
   
   input:checked + .slider:before {
