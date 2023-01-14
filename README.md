@@ -4,7 +4,7 @@
 
  ## **_Welcome!_** 🌤️☔🌨️
 
- This app gives you need-to-know weather information, wherever you are!
+ This app gives you the weather information you need to know, wherever you are!
  
  ---
  
