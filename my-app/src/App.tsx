@@ -10,7 +10,9 @@ import { newImageMap } from "./data/data";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
   const [tempC, setTempC] = useState(0);
-  const [visibility, setVisibility] = useState(0);
+
+  const [sunset, setSunset] = useState("0")
+
   const [locationForm, setLocationForm] = useState({ City: "", Country: "" });
   const [locationOnClick, setLocationOnClick] = useState({
     City: "london",
@@ -40,7 +42,14 @@ function App() {
       setWeatherDescription(data.weather[0].main);
       setWindspeed(data.wind.speed);
       setHumidity(data.main.humidity);
-      setVisibility(data.visibility);
+
+      let date = new Date(data.sys.sunset * 1000)
+      let hours = date.getHours()
+      let minutes =  date.getMinutes()
+      let formattedTime = hours + ' : ' + minutes
+      setSunset(formattedTime)
+
+
     }
     getData();
   }, [locationOnClick]);
@@ -61,8 +70,17 @@ function App() {
       setTempC(temp);
       setCityTag(data.name);
       setLocationOnClick(locationForm);
-      setVisibility(data.visibility);
+
+      setHumidity(data.main.humidity);
+    
+      let date = new Date(data.sys.sunset * 1000)
+      let hours = date.getHours()
+      let minutes =  date.getMinutes
+      let formattedTime = hours + ':' + minutes
+      setSunset(formattedTime)
+
       setLocationForm({ City: "", Country: "" });
+
     }
     getData();
   }
@@ -73,14 +91,17 @@ function App() {
 
   return (
     <div className={darkMode ? `App App-Dark` : `App App-Light`}>
+      <Toggle />
       <div className="findCity">
+
         <Search
           value={locationForm.City}
           placeholder="Search City"
           onChange={onChangeCity}
         />
+
         <Button onClick={getWeatherByLocation}></Button>
-        <Toggle />
+        
       </div>
       <WeatherWidget
         locationOnClick={locationOnClick}
@@ -91,7 +112,7 @@ function App() {
         humidity={humidity}
         windspeed={windspeed}
         weatherDescription={weatherDescription}
-        visibility={visibility}
+        sunset={sunset}
       />
 
       <div></div>

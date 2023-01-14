@@ -3,7 +3,7 @@ import "./weather.css";
 import wind from "../../Assets/weather-icons/wind-speed.png";
 import humidity from "../../Assets/weather-icons/humidity.png";
 import pin from "../../Assets/weather-icons/location.png";
-import visbility from "../../Assets/weather-icons/visibility.png";
+import sunset from "../../Assets/weather-icons/sunset.png";
 import FiveDayWeather from "../fiveDayWeather/fiveDay";
 import { DarkModeContext } from "../../Context/DarkModeContext";
 
@@ -16,7 +16,7 @@ type weatherWidgetProps = {
   windspeed: number;
   weatherDescription: string;
   humidity: number;
-  visibility: number;
+  sunset: string;
 };
 
 export default function WeatherWidget(props: weatherWidgetProps) {
@@ -103,19 +103,22 @@ export default function WeatherWidget(props: weatherWidgetProps) {
             <img className="icon" src={wind} alt="wind" />
 
             <span className="units">{props.windspeed}kmph</span>
+      
           </p>
           <p className="visibility">
-            <img className="icon" src={visbility} alt="visibility" />
+            <img className="icon" src={sunset} alt="sunset" />
 
             <span className="units">
               {" "}
-              {(props.visibility / 1000).toFixed(1)}km
+              {props.sunset }
             </span>
+        
           </p>
           <p className="humidity">
             <img className="icon" src={humidity} alt="humidity" />
 
             <span className="units"> {props.humidity}%</span>
+
           </p>
         </div>
         <FiveDayWeather location={props.locationOnClick} toggle={toggle} />
