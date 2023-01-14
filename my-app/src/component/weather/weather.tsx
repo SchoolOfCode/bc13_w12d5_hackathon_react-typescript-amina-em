@@ -40,31 +40,34 @@ export default function WeatherWidget(props: weatherWidgetProps) {
         }
       >
         <div className="card-header">
-          <p>
+          <p className="location-text">
             <img className="pin" src={pin} alt="source" />
             {props.city}
           </p>
-          {/* {toggle ? (
-          <button
-            className="toggle"
-            onClick={() => {
-              onToggleClick(props.tempC);
-            }}
-          >
-            {" "}
-            Change to Farenheit
-          </button>
-        ) : (
-          <button
-            className="toggle"
-            onClick={() => {
-              onToggleClick(props.tempC);
-            }}
-          >
-            {" "}
-            Change to Celsius
-          </button>
-        )} */}
+          <div className="c-f-toggle-container">
+            <div className="c-f-toggle-switch">
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  className={
+                    darkMode
+                      ? `checkbox  checkbox-dark`
+                      : `checkbox  checkbox-light`
+                  }
+                  onChange={() => {
+                    onToggleClick(props.tempC);
+                  }}
+                />
+                <span
+                  className={
+                    darkMode
+                      ? `c-f-slider  c-f-slider-dark`
+                      : `c-f-slider  c-f-slider-light`
+                  }
+                ></span>
+              </label>
+            </div>
+          </div>
         </div>
         <div
           className={

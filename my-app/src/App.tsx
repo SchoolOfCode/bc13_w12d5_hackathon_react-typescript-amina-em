@@ -10,7 +10,9 @@ import { newImageMap } from "./data/data";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
   const [tempC, setTempC] = useState(0);
+
   const [sunset, setSunset] = useState("0")
+
   const [locationForm, setLocationForm] = useState({ City: "", Country: "" });
   const [locationOnClick, setLocationOnClick] = useState({
     City: "london",
@@ -40,11 +42,13 @@ function App() {
       setWeatherDescription(data.weather[0].main);
       setWindspeed(data.wind.speed);
       setHumidity(data.main.humidity);
+
       let date = new Date(data.sys.sunset * 1000)
       let hours = date.getHours()
       let minutes =  date.getMinutes()
       let formattedTime = hours + ' : ' + minutes
       setSunset(formattedTime)
+
 
     }
     getData();
@@ -59,13 +63,14 @@ function App() {
       const temp: number | undefined = Number(
         (data.main.temp - 273.15).toFixed(1)
       );
-      console.log(data)
+      console.log(data);
       const myIcon = data.weather[0].icon;
       setIcon(newImageMap[myIcon]);
 
       setTempC(temp);
       setCityTag(data.name);
       setLocationOnClick(locationForm);
+
       setHumidity(data.main.humidity);
     
       let date = new Date(data.sys.sunset * 1000)
@@ -73,6 +78,9 @@ function App() {
       let minutes =  date.getMinutes
       let formattedTime = hours + ':' + minutes
       setSunset(formattedTime)
+
+      setLocationForm({ City: "", Country: "" });
+
     }
     getData();
   }
@@ -85,7 +93,13 @@ function App() {
     <div className={darkMode ? `App App-Dark` : `App App-Light`}>
       <Toggle />
       <div className="findCity">
-        <Search placeholder="Search By City" onChange={onChangeCity} />
+
+        <Search
+          value={locationForm.City}
+          placeholder="Search City"
+          onChange={onChangeCity}
+        />
+
         <Button onClick={getWeatherByLocation}></Button>
         
       </div>

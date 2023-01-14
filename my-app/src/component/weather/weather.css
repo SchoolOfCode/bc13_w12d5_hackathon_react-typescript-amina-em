@@ -1,18 +1,15 @@
-.toggle {
-  border-radius: 6%;
-  /* border-color: #B8ADF0; */
-  border-width: 2px;
-  font-family: "Dosis-regular";
-  font-size: 15px;
-  font-weight: 2px;
-  /* background-color:#8b7dcf; */
-  /* color: white; */
-}
 .card-header {
   display: flex;
   flex-direction: row;
   margin: 0;
+  
+ align-items: center;
 }
+
+.location-text{
+  font-size:25px;
+}
+
 .weather-icon {
   height: 80%;
   width: auto;
@@ -23,7 +20,7 @@
   display: flex;
   flex-direction: column;
   font-family: Neucha-Regular;
-  height: 80%;
+    height: 80%;
   width: 25%;
   align-items: center;
   margin: 0;
@@ -108,4 +105,116 @@
   height: 30px;
   width: 30px;
 }
+
+.c-f-toggle-container {
+  text-align: center;
+}
+/* The switch - the box around the slider */
+.c-f-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.c-f-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.c-f-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 90px;
+  border-radius: 34px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.c-f-slider-dark:before{
+  background-color: white;
+}
+
+.c-f-slider-light:before{
+background-color: white;
+}
+
+.c-f-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.checkbox-dark:checked + .c-f-slider {
+  background-color: rgb(21, 13, 74);;
+}
+
+.checkbox-light:checked + .c-f-slider {
+  background-color: #ccabeb;
+  }
+
+.checkbox-dark:checked + .c-f-slider {
+  background-color: rgb(21, 13, 74);;
+}
+
+.checkbox-light:checked + .c-f-slider {
+  background-color: #ccabeb;
+}
+
+.checkbox:checked + .c-f-slider:before {
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+.c-f-slider:after
+{
+ content:'°F';
+ text-align:right;
+ 
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 15px;
+ font-family: "Dosis-regular";
+}
+
+.c-f-slider-light:after{
+  color:black;
+}
+
+.checkbox:checked + .c-f-slider-light:after
+{  
+  content:'°C';
+  text-align: left;
+  color: black;
+}
+
+.c-f-slider-dark:after{
+  color:black;
+}
+
+
+.checkbox:checked + .c-f-slider-dark:after{
+  content:'°C';
+  color:white;
+}
+
 
