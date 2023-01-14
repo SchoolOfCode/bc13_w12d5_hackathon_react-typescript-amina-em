@@ -81,7 +81,7 @@ To run the front-end locally follow the steps below:
 | ---------- | ---------------------------------------------------------------------- |
 | Background | ![#A975DB](https://via.placeholder.com/15/A975DB/A975DB.png) `#448FFF` |
 | Secondary  | ![#150d4a](https://via.placeholder.com/15/150d4aF/150d4a.png)`#B2D1FF` |
-| Main       | ![#0000004d](https://via.placeholder.com/15/fff/fff.png) `#fff`        |
+| Main       | ![#0000004d](https://via.placeholder.com/15/0000004d/0000004d.png) `#0000004d`        |
 
 <br/>
 
@@ -100,7 +100,7 @@ To run unit tests, run the following command
 | ---------- | ---------------------------------------------------------------------- |
 | Background | ![#DBECFF](https://via.placeholder.com/15/DBECFF/DBECFF.png) `#448FFF` |
 | Secondary  | ![#EAC6FE](https://via.placeholder.com/15/EAC6FE/EAC6FE.png)`#B2D1FF`  |
-| Main       | ![#E7D1FF](https://via.placeholder.com/15/E7D1FF/E7D1FF.png) `#fff`             |
+| Main       | ![#E7D1FF](https://via.placeholder.com/15/E7D1FF/E7D1FF.png) `#E7D1FF`             |
 
 <br/>
 
