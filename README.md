@@ -1,33 +1,35 @@
-**[DEMO LINK](https://care-full.netlify.app/](https://deploy-preview-1--friendly-semifreddo-be1b9a.netlify.app/)**
+**[DEMO LINK](https://deploy-preview-1--friendly-semifreddo-be1b9a.netlify.app/)**
 
 <br/>
 
-@@ -61,75 +59,23 @@ This app aims to alleviate some of the stress that comes with having a sick pet
-- Secure login and authorisation provided by Auth0
-- Add multiple pets
-- Update pet information
-- Symptom tracker:
-  - Add different symptoms
-  - Automatically stores instances of the same symptoms in one convenient location
-  - Keep track of the time and date that symptoms occured
-- Schedule Tracker & reminder system:
-  - Keep track of medications/appointments for your pet
-  - Schedule recurring reminders
-  - Mark reminders as done - automatically moved into your history page, should you need to check dates
-  - Delete reminders that you no longer want/need
-- Useful links page directs you to cat/dog friendly resources depending on your pet species
-- Toggle for colourblind users
-- Modals on every page to provide instructions for the user every step of the way
-  <br/>
+ ## **_Welcome!_** 🌤️☔🌨️
 
+ This app gives you need-to-know weather information no matter what your location.
+ 
+ ---
+ 
+  <br />
+ 
+  ## **_App Demo_** 
+
+ ---
+ 
+ <br />
+ 
+ ## **_Features_** 📱
+ 
+ - Global forecasting
+ - Wind speed, sunset time and humidity stats
+ - Temperature easily switches between Celcius and Farenheit
+ - Five-day look-ahead with temperature forecast
+ - Toggle between light and dark mode
+ 
 ---
 
 <br />
 
 ## **_Getting Started_** ✅
 
-
-### **Front-end**
 
 To run the front-end locally follow the steps below:
 
@@ -43,12 +45,11 @@ To run the front-end locally follow the steps below:
 
 3. Install all necessary dependencies by running the following command in the terminal:
 
-
 ```bash
   npm i
 ```
 
-@@ -140,7 +86,7 @@ To run the front-end locally follow the steps below:
+To run the front-end locally follow the steps below:
 4. Start the app using:
 
 ```bash
@@ -57,25 +58,22 @@ To run the front-end locally follow the steps below:
 
 <br/>
 
-
 ## **_Tech Stack⚙️_**
 
-**Client:** React.JS - Typescript, CSS
+**Client:** React.js, Typescript, CSS
 </br>
 
-**Server:** Node.js, API - https://openweathermap.org/guide
+**Server:** Node.js, API: https://openweathermap.org/guide
 </br>
 
 
 <br/>
 
 ---
-@@ -167,25 +109,26 @@ To run the front-end locally follow the steps below:
 
-## **_Colour Reference_** 🖌️
+## **_Colour Reference_** 🎨
 
 ## **_Dark-Mode_** 🌑
-
 
 | Colour     | Hex                                                                    |
 | ---------- | ---------------------------------------------------------------------- |
@@ -91,11 +89,6 @@ To run the front-end locally follow the steps below:
 
 ## **_Light-Mode_** ☀️
 
-To run unit tests, run the following command
-
-```bash
-  npm run test
-```
 | Colour     | Hex                                                                    |
 | ---------- | ---------------------------------------------------------------------- |
 | Background | ![#DBECFF](https://via.placeholder.com/15/DBECFF/DBECFF.png) `#448FFF` |
@@ -104,14 +97,15 @@ To run unit tests, run the following command
 
 <br/>
 
+## **_Our Team_** ✨
 
-
-- [Amina Edmunds](https://github.com/edmundsamina))
+- [Amina Edmunds](https://github.com/edmundsamina)
 - [Emily Pritchard](https://github.com/EmilyPri)
 
 
 <br/>
 
+## **_Appendix_** 🖊️
 
 </br>
 
