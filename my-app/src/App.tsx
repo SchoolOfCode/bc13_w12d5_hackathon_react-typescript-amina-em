@@ -75,7 +75,7 @@ function App() {
     
       let date = new Date(data.sys.sunset * 1000)
       let hours = date.getHours()
-      let minutes =  date.getMinutes
+      let minutes =  date.getMinutes()
       let formattedTime = hours + ':' + minutes
       setSunset(formattedTime)
 
