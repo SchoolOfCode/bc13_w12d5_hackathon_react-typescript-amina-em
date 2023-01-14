@@ -25,7 +25,7 @@ export default function WeatherWidget(props: weatherWidgetProps) {
   const [toggle, setToggle] = useState(true);
 
   function onToggleClick(tempC: number): void {
-    const fh: number = Number(((tempC * (5 / 9)) + 32).toFixed(1));
+    const fh: number = Number(((tempC * (9 / 5)) + 32).toFixed(1));
     setTempF(fh);
     setToggle(!toggle);
   }
