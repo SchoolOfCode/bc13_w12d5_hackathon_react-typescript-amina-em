@@ -49,7 +49,7 @@ To run the front-end locally follow the steps below:
   npm i
 ```
 
-To run the front-end locally follow the steps below:
+
 4. Start the app using:
 
 ```bash
@@ -85,8 +85,6 @@ To run the front-end locally follow the steps below:
 
 ---
 
-<br />
-
 ## **_Light-Mode_** ☀️
 
 | Colour     | Hex                                                                    |
@@ -95,6 +93,7 @@ To run the front-end locally follow the steps below:
 | Secondary  | ![#EAC6FE](https://via.placeholder.com/15/EAC6FE/EAC6FE.png)`#B2D1FF`  |
 | Main       | ![#E7D1FF](https://via.placeholder.com/15/E7D1FF/E7D1FF.png) `#E7D1FF`             |
 
+---
 <br/>
 
 ## **_Our Team_** ✨
@@ -103,11 +102,11 @@ To run the front-end locally follow the steps below:
 - [Emily Pritchard](https://github.com/EmilyPri)
 
 
+---
 <br/>
 
 ## **_Appendix_** 🖊️
 
-</br>
 
 - [React.js](https://reactjs.org/)
 - [Netlify](https://www.netlify.com/)
