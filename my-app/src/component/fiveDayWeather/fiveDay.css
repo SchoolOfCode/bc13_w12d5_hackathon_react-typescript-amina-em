@@ -1,0 +1,39 @@
+.five-day-container{
+        margin-top: 12%;
+    padding-top: 15%;
+    padding-bottom: 2%;
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0px 0px  18px  18px;
+}
+
+.five-day-container-light{background-color:rgb(255, 255, 255);}
+.five-day-container-dark{background-color: #131438;
+color: white }
+
+.fiveDaySingleCard{
+    display: flex;
+    flex-direction: row;
+    font-family: Dosis-Regular;
+    border-radius: 4%;
+    justify-content: space-evenly;
+    align-items: center; 
+    font-size: 80%;
+}
+
+
+
+img {
+    height: auto;
+    width: 50%;
+}
+
+.img-single{
+    width: 10%;
+    height: auto;
+   
+}
+

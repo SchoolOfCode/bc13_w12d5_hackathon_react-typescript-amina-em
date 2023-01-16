@@ -1,0 +1,220 @@
+.card-header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  
+ align-items: center;
+}
+
+.location-text{
+  font-size:25px;
+}
+
+.weather-icon {
+  height: 80%;
+  width: auto;
+  justify-content: center;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  font-family: Neucha-Regular;
+    height: 80%;
+  width: 25%;
+  align-items: center;
+  margin: 0;
+  gap: 15px;
+  border-radius: 20px;
+ 
+}
+
+.weather-card-light {
+  color: #150d4a;
+  background-color: hsl(268, 100%, 91%, 0.3);
+  box-shadow: rgba(45, 35, 66, .8) 0 2px 4px,rgba(45, 35, 66, .8) 0 7px 13px -3px,rgba(58, 65, 111, 1) 0 -3px 0 inset;
+}
+
+.weather-card-dark {
+  color: rgb(21, 13, 74);
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,#0000004d 0 7px 13px -3px,rgba(0, 0, 0, 0.5) 0 -3px 0 inset;
+  background-color: #f2f0f5;
+}
+
+.weather-info {
+  align-items: center;
+    margin-top: 14.5%;
+  width: 34.5vh;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  position: absolute;
+  z-index: 3;
+}
+
+.weather-info-light{
+  background-color:rgb(187, 221, 255);
+}
+.weather-info-dark{background-color:  #A177CA;}
+.weather-description-container {
+  display: flex;
+  height: 22%;
+  width: 68%;
+   justify-content: space-evenly;
+  align-items: center;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+}
+  
+
+  .weather-description-container-light{ background-color: #8ec5fc;
+  background-image: linear-gradient(
+    315deg,
+    #8ec5fc 0%,
+    #e7d2ff 53%,
+    #fff8ea 100%)}
+
+  .weather-description-container-dark{color: white;
+    background-color: #EAC6FE;
+    background-image: linear-gradient(-31deg, #EAC6FE 0%, #A177CA 18%, #8457AF 39%, #2C4C9B 65%, #150D4A 100%);}
+
+.wind-speed,
+.visibility,
+.humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.pin {
+  height: 30px;
+  width: 30px;
+}
+
+.c-f-toggle-container {
+  text-align: center;
+}
+/* The switch - the box around the slider */
+.c-f-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.c-f-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.c-f-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 90px;
+  border-radius: 34px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.c-f-slider-dark:before{
+  background-color: white;
+}
+
+.c-f-slider-light:before{
+background-color: white;
+}
+
+.c-f-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.checkbox-dark:checked + .c-f-slider {
+  background-color: rgb(21, 13, 74);;
+}
+
+.checkbox-light:checked + .c-f-slider {
+  background-color: #ccabeb;
+  }
+
+.checkbox-dark:checked + .c-f-slider {
+  background-color: rgb(21, 13, 74);;
+}
+
+.checkbox-light:checked + .c-f-slider {
+  background-color: #ccabeb;
+}
+
+.checkbox:checked + .c-f-slider:before {
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+.c-f-slider:after
+{
+ content:'°F';
+ text-align:right;
+ 
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 15px;
+ font-family: "Dosis-regular";
+}
+
+.c-f-slider-light:after{
+  color:black;
+}
+
+.checkbox:checked + .c-f-slider-light:after
+{  
+  content:'°C';
+  text-align: left;
+  color: black;
+}
+
+.c-f-slider-dark:after{
+  color:black;
+}
+
+
+.checkbox:checked + .c-f-slider-dark:after{
+  content:'°C';
+  color:white;
+}
+
+
